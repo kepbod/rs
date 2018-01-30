@@ -67,8 +67,6 @@ def parse_intron(options, chrom, start, end, strand, intron_info):
     # fetch fasta
     fa = check_fasta(options['--genome'])
     intron_fa = dna_to_rna(fa.fetch(chrom, start, end), strand)
-    if intron_fa.find('N') != -1:  # ensure there is no N
-        return (None, None)
     # load matrix
     matrix3 = load_matrix3()
     # parse options
@@ -86,6 +84,8 @@ def parse_intron(options, chrom, start, end, strand, intron_info):
             if not dist_flag:  # not enough distance
                 continue
             ss3_seq = dna_to_rna(fa.fetch(chrom, pos - 20, pos + 3))
+            if ss3_seq.find('N') != -1:  # ensure there is no N
+                continue
             ss3, score_flag = cal_score(ss3_seq, matrix3, min_score)
             if not score_flag:  # not high score
                 continue
@@ -97,6 +97,8 @@ def parse_intron(options, chrom, start, end, strand, intron_info):
                 continue
             ss3_seq = dna_to_rna(fa.fetch(chrom, pos - 3, pos + 20),
                                  strand='-')
+            if ss3_seq.find('N') != -1:  # ensure there is no N
+                continue
             ss3, score_flag = cal_score(ss3_seq, matrix3, min_score)
             if not score_flag:  # not high score
                 continue
