@@ -24,7 +24,7 @@ import pyBigWig
 from seqlib.ngs import check_fasta
 from seqlib.parse import Annotation
 from seqlib.seq import dna_to_rna
-from maxentpy import score3, load_matrix3
+from maxentpy.maxent import score3, load_matrix3
 
 __author__ = 'Xiao-Ou Zhang <xiaoou.zhang@umassmed.edu>'
 __version__ = '0.0.1'
