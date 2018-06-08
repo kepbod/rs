@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 '''
 Usage: check_pattern.py [options] -j JUNC (-b BAM | -g BIGWIG) <rs_pattern>

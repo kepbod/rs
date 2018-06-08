@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 '''
 Usage: find_site.py [options] -r REF -g GENOME -b BIGWIG <rs_site>
@@ -10,8 +10,8 @@ Options:
     -g GENOME --genome=GENOME      Genome FASTA file.
     -b BIGWIG --bigwig=BIGWIG      PhastCons BigWig file.
     -p THREAD --thread=THREAD      Threads. [default: 5]
-    --intron-length=LENGTH         Minimum intron length. [default: 10000]
-    --min-phastcons=PHASTCONS      Minimum PhastCons. [default: 0.9]
+    --intron-length=LENGTH         Minimum intron length. [default: 5000]
+    --min-phastcons=PHASTCONS      Minimum PhastCons. [default: 0.5]
     --min-distance=DISTANCE        Minimum distance to splicing sites.
                                    [default: 2000]
     --min-score=SCORE              Minimum splicing site score for 3ss.

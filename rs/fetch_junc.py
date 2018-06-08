@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 '''
 Usage: fetch_junc.py [options] -s SITE (-b BAM | -j JUNC) <rs_junc>
